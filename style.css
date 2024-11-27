@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+body {
+    font-family: 'Arial', sans-serif;  /* Унифициран шрифт */
+    background-color: #f4f4f4;  /* Светъл фон за основното съдържание */
+}
+
+.main {
+    width: 100%;
+    background: 
+    linear-gradient(to top, rgba(100, 94, 23, 0.479), rgba(100, 94, 23, 0.432)),
+    url(https://webnews.bg/uploads/images/14/2014/632014/768x432.jpg?_=1693481976);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 100%;
+    height: 120px;  /* Увеличавам височината на лентата */
+    background: rgba(0, 0, 0, 0.4);  /* Затъмнен фон за лентата */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;  /* Премествам съдържанието с 40px отляво и отдясно */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 40px;  /* Увеличавам разстоянието между елементите */
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    font-size: 18px;  /* Увеличавам шрифта */
+    padding: 0 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+ul li a:hover {
+    color: white;
+    border-bottom: 2px solid #f1a04a;
+    border-radius: 0%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Разстояние между полето за търсене и бутона */
+}
+
+.srch {
+    display: flex;
+}
+
+.srch input[type="search"] {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.srch input[type="search"]:focus {
+    background-color: #f1a04a;
+    color: white;
+}
+
+.btn {
+    background-color: #f1a04a;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0 25px 25px 0;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e17b38;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #d37a2d;
+    transform: scale(0.95);
+}
+
+.content {
+    text-align: center;
+    color: white;
+    margin-top: 250px;
+}
+
+.content h1 {
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.content span {
+    color: #f1a04a;
+}
+
+.content p {
+    font-size: 22px; /* Още по-малък шрифт за описание */
+    font-weight: 400; /* Лек по-лека тежест */
+    color: #ddd; /* Сив текст за по-добра четимост */
+    line-height: 1.8; /* Разстояние между редовете */
+    max-width: 1000px; /* Ширина за по-добро разположение */
+    margin: 20px auto; /* Центриране и малко разстояние от останалото съдържание */
+    text-align: center; /* Центрирания на текста */
+    padding: 15px; /* Повече вътрешно разстояние */
+    font-family: 'Open Sans', Arial, sans-serif; /* Подходящ шрифт за по-добра четимост */
+    text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.3), /* Горен десен ъгъл */
+    -2px -2px 0 rgba(0, 0, 0, 0.3), /* Долен ляв ъгъл */
+    2px -2px 0 rgba(0, 0, 0, 0.3), /* Долен десен ъгъл */
+    -2px 2px 0 rgba(0, 0, 0, 0.3); /* Горен ляв ъгъл */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* Специален цвят за част от текста */
+.content span {
+    color: #f1a04a; /* Оранжев акцент */
+    text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.3), /* Горен десен ъгъл */
+    -2px -2px 0 rgba(0, 0, 0, 0.3), /* Долен ляв ъгъл */
+    2px -2px 0 rgba(0, 0, 0, 0.3), /* Долен десен ъгъл */
+    -2px 2px 0 rgba(0, 0, 0, 0.3); /* Горен ляв ъгъл */
+}
+
+/* Бутон под заглавието */
+.content .btn-shop {
+    background-color: #f1a04a;  /* Оранжев фон */
+    color: white;  /* Бял текст */
+    border: none;
+    height: 50px;
+    width: 250px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    border-radius: 25px;  /* Заоблени ъгли */
+    padding-top: 0;
+    margin-top: 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+}
+
+.content .btn-shop:hover {
+    background-color: #e17b38;  /* Тъмен оранжев при hover */
+    transform: scale(1.05);  /* Леко увеличение */
+}
+
+.content .btn-shop:active {
+    transform: scale(0.95);  /* Леко намаляване при натискане */
+}
+.icon2 i {
+    color: white;  /* Променя цвета на иконката на бяло */
+}
+/* Стил за footer */
+footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);  /* Затъмнен фон */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/*------------------------------------------------CONTACTS-----------------------------------------------------------------------------*/
+
+.contact {
+    position: relative;
+    min-height: auto; /* Автоматична височина спрямо съдържанието */
+    padding: 50px 20px; /*  Разстояние отгоре, отдолу, отляво и отдясно */
+    margin-top: 120px; /* За да не се застъпва с навигацията */
+    background-color: #f8f8f8ec; /* Фон само за contact секцията */
+    border-radius: 10px; /* Заоблени ъгли за секцията */
+    margin-left: auto; /* Центриране секцията */
+    margin-right: auto; /* Центриране секцията */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Лека сянка */
+    margin-top: 200px;
+    width: 1000px;
+}
+
+.contact .contacts{
+    max-width: 800px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.contact .contacts h2{
+    font-size: 40px;
+    font-weight: bold;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+.contact .contacts p{
+    font-weight: 300;
+    color: #333;
+}
+
+.block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.block .blockInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.box .icon2{
+    min-width: 60px;
+    height: 60px;
+    background:#000000c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+
+.box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #333;
+    flex-direction: column;
+    font-weight: 300;
+    
+}
+
+.box .text h3{
+    font-size: 20px;
+    font-weight: 300;
+    color: #e17b38;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #3333332a;
+    border-radius: 4%;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 18px;
+}
+
+.inputBox input, .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #33333356;
+    outline: none;
+    resize: none;
+    padding-left: 5px;
+    border-radius: 5%;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666; 
+    margin-left: 10px;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span{
+    color: #e17b38;
+    font-size: 20px;
+    transform: translateY(-27px);
+}
+
+.contactForm .blockInfo input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #666;
+    border: none;
+    cursor:pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;  /* Навигацията се адаптира към мобилни устройства */
+        justify-content: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .search {
+        margin-top: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .srch input[type="search"] {
+        width: 80%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .content span {
+        font-size: 28px;
+    }
+}

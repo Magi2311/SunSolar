@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Соларни панели</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-aO6hMLc1wlbHoDJ4i+jfiOZUn0/z7n/u/lBtj8o5ESOB+EmzERvDlPS7CLLf/u9Kh51RkD6fD9Noaj5niZobFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/4a8b266e8b.js" crossorigin="anonymous"></script>
+    <body>
+        <div class="main">
+            <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo" href="SSS.html" href="p">
+                        <img src="dsadasda.png" width="120px" href="SSS.html">
+                    </h2>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="SSS.html">Начало</a></li>
+                        <li><a href="Forus.html">За нас</a></li>
+                        <li><a href="Products.html">Продукти и услуги</a></li>
+                        <li><a href="Gallery.html">Галерия</a></li>
+                        <li><a href="Contacts.html">Контакти</a></li>
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <div class="srch">
+                        <input type="search" name="" placeholder="Type To text">
+                        <button class="btn">Search</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="contact">
+                <div class="contacts" >
+                    <h2>Имате нужда от консултация?</h2> <br>
+                    <p>Свържете се с нас и изберете енергийно ефективно решение
+                        за вас или вашия бизнес.
+                    </p>
+                </div>
+                <div class="block">
+                    <div class="blockInfo">
+
+                        <div class="box">
+                            <div class="icon2"><i class="fas fa-map-marker-alt" ></i></div>
+                            <div class="text">
+                                <h3>Адрес</h3>
+                                <p>гр. Сливен, <br>
+                                    ул."Великокняжевска" №69,
+                                <br> 8800</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="icon2"><i class="fas fa-phone"></i></div>
+                            <div class="text">
+                                <h3>Номер</h3>
+                                <p>+359898226526</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="icon2"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                            <div class="text">
+                                <h3>Имейл</h3>
+                                <p>nikolaidolapchiev@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contactForm">
+                        <form id="contactForm">
+                            <h2>Изпрати съобщение</h2>
+                    
+                            <div class="inputBox">
+                                <input type="text" name="name" id="name" required="required">
+                                <span>Две имена</span>
+                            </div>
+                    
+                            <div class="inputBox">
+                                <input type="email" name="email" id="email" required="required">
+                                <span>Имейл</span>
+                            </div>
+                    
+                            <div class="inputBox">
+                                <textarea name="message" id="message" required="required"></textarea>
+                                <span>Описание...</span>
+                            </div>
+                    
+                            <input type="submit" value="Изпрати" id="submitButton" class="btn">
+                        </form>
+                    
+                        <!-- Модален прозорец за съобщението -->
+                        <div id="modal" style="display: none;">
+                            <div id="modalContent">
+                                <span id="closeModal" style="cursor: pointer; position: absolute; top: 10px; right: 10px; font-size: 25px; color: red;">&times;</span>
+                                <p id="responseText">Неуспешно! В процес на обработка</p>
+                            </div>
+                        </div>
+                    
+                        <style>
+                            .btn {
+                                display: block;
+                                margin: 0 auto;
+                                text-align: center;
+                                border-radius: 5%;
+                            }
+                    
+                            /* Стилове за модален прозорец */
+                            #modal {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, 0.5); /* полупрозрачен фон */
+                                display: none; /* Скрита по подразбиране */
+                                justify-content: center;
+                                align-items: center;
+                            }
+                    
+                            #modalContent {
+                                background-color: white;
+                                padding: 20px;
+                                border-radius: 5px;
+                                width: 300px;
+                                text-align: center;
+                                position: relative;
+                            }
+                    
+                            #closeModal {
+                                font-size: 25px;
+                                color: red;
+                            }
+                        </style>
+                    </div>
+                    
+                    <script>
+                        // Извличане на елементи
+                        let form = document.getElementById("contactForm");
+                        let modal = document.getElementById("modal");
+                        let responseText = document.getElementById("responseText");
+                        let closeModal = document.getElementById("closeModal");
+                    
+                        // Добавяне на събитие за изпращане на формата
+                        form.addEventListener("submit", function (event) {
+                            event.preventDefault(); // Спира стандартното изпращане на формата
+                    
+                            // Показване на модалния прозорец с съобщение
+                            modal.style.display = "flex"; // Показва прозореца
+                            responseText.textContent = "Неуспешно! В процес на обработка"; // Текста на съобщението
+                        });
+                    
+                        // Затваряне на модалния прозорец при натискане на "X" (горния десен ъгъл)
+                        closeModal.addEventListener("click", function() {
+                            modal.style.display = "none"; // Скрива прозореца
+                            responseText.textContent = ""; // Изчиства съдържанието на съобщението
+                            form="";
+                            modal="";
+                            responseText="";
+                            closeModal="";
+                        });
+                    </script>
+                    
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy; 2024 
+                СЪН СОЛАР СЪРВИС  </p>
+            </footer>
+        </div>
+    </body>
+    </head>
+</html>
